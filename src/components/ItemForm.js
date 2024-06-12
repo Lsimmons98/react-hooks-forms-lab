@@ -5,14 +5,15 @@ function ItemForm({onItemFormSubmit}) {
   const [newItem, setNewItem] = useState({
     name : '',
     category : 'Produce',
-    id : uuid()
+    id : ''
   })
 
   const handleOnChange = (e) => {
     e.preventDefault()
     const categoryOrName = e.target.name
     const newItemValue = e.target.value
-    setNewItem({...newItem, [categoryOrName] : newItemValue})
+    setNewItem({...newItem, [categoryOrName] : newItemValue, id : uuid()})
+    console.log(newItem)
   }
 
   const handleSubmit = (e) => {
