@@ -13,7 +13,6 @@ function ItemForm({onItemFormSubmit}) {
     const categoryOrName = e.target.name
     const newItemValue = e.target.value
     setNewItem({...newItem, [categoryOrName] : newItemValue, id : uuid()})
-    console.log(newItem)
   }
 
   const handleSubmit = (e) => {
